@@ -39,7 +39,9 @@ const Project = [
     name: "do386",
     logo: do386,
     beschreibung:
-      "Really simple todo app in 386 style. Build with react & firebase."
+      "Really simple todo app in 386 style. Build with react & firebase.",
+    github: "https://github.com/groev/do386",
+    demo: "https://do386.netlify.app"
   },
   {
     name: "QR code participation",
@@ -60,6 +62,12 @@ const Project = [
     beschreibung: "Calculating the value of an option based on black-scholes.",
     github: "https://github.com/groev/options-value",
     demo: "https://options-value.netlify.app/"
+  },
+  {
+    name: "Covid-Town",
+    beschreibung: "Game to visualize the impact of a viral disease.",
+    github: "https://github.com/groev/covid-town",
+    demo: "https://covidtown.netlify.app/game"
   }
 ];
 export default Project;
