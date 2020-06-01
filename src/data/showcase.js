@@ -27,7 +27,8 @@ const Project = [
     name: "tymelog",
     logo: tymelog,
     beschreibung:
-      "Track your Wordpress hours automatically. Build with mern stack."
+      "Track your Wordpress hours automatically. Build with mern stack.",
+    demo: "https://tymelog.netlify.app/"
   },
   {
     name: "max out",
