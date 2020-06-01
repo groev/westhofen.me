@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+$break: 700px;
+@mixin transition {
+  transition: all 0.2s ease;
+}
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+h2 {
+  margin: 0.5rem;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  @media (max-width: $break) {
+    padding: 1rem 2rem;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  .logo {
+    max-height: 60px;
+    width: auto;
+    @media (max-width: $break) {
+      max-height: 40px;
+    }
+  }
+
+  .toolbar {
+    a.contact {
+      float: left;
+      display: inline-block;
+      color: #000;
+      border: 1px solid #000;
+      border-radius: 25px;
+      padding: 5px 10px;
+      text-decoration: none;
+      @include transition;
+      &:hover {
+        @include transition;
+        color: #fff;
+        background: #000;
+      }
+    }
+    a.external {
+      float: left;
+
+      height: 28px;
+      width: auto;
+      border: none;
+      padding: none;
+      display: inline-block;
+      img {
+        height: 32px;
+        margin-right: 10px;
+        width: auto;
+      }
+      @include transition;
+
+      &:hover {
+        @include transition;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0rem;
+  img {
+    margin-bottom: 4rem;
+  }
+}
+
+#intro {
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  text-align: center;
+  a {
+    color: #000;
+    @include transition;
+
+    &:hover {
+      @include transition;
+
+      color: #ccc;
+    }
+  }
+  img {
+    max-width: 350px;
+    margin-bottom: 50px;
+  }
+}
+
+#showcase {
+  text-align: center;
+  background: #eee;
+  margin: 0 auto;
+  padding: 200px 0px;
+  .grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    row-gap: 20px;
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin-top: 100px;
+    @media (max-width: $break) {
+      grid-template-columns: 1fr;
+    }
+    .project {
+      width: 100%;
+      height: 300px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+      color: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      &:hover .front {
+        @include transition;
+        transform: translateY(-100%);
+      }
+      &:hover .back {
+        @include transition;
+        transform: translateY(0%);
+      }
+      .front {
+        @include transition;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .back {
+        @include transition;
+        transform: translateY(100%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+        a {
+          margin: 5px;
+          @include transition;
+
+          display: inline-block;
+          background: #fff;
+          border-radius: 5px;
+          padding: 5px 10px;
+          text-decoration: none;
+          color: #000;
+          &:hover {
+            @include transition;
+
+            background: #000;
+            color: #fff;
+          }
+        }
+      }
+      img {
+        max-height: 80%;
+        width: auto;
+        height: auto;
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+#Intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  svg {
+    height: 100px;
+    width: auto;
+  }
+}
