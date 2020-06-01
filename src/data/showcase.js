@@ -33,7 +33,9 @@ const Project = [
     name: "max out",
     logo: maxout,
     beschreibung:
-      "Simple app for increasing your one rep max in the weightroom. Build with react."
+      "Simple app for increasing your one rep max in the weightroom. Build with react.",
+    demo: "https://max-out.netlify.app/",
+    github: "https://github.com/groev/max-out"
   },
   {
     name: "do386",
