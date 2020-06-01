@@ -2,29 +2,22 @@ import React from "react";
 
 export default function Project(props) {
   return (
-    <div
-      className="project"
-      style={{ backroundImage: "url(" + props.data.bg + ")" }}
-    >
+    <div className="project">
       <div className="front">
-        <img src={props.data.logo} />
+        {props.data.logo ? <img src={props.data.logo} /> : props.data.name}
       </div>
       <div className="back">
         <div>
           <p>{props.data.beschreibung}</p>
-          {props.data.demo ? (
+          {props.data.demo && (
             <a target="_blank" href={props.data.demo}>
               Demo
             </a>
-          ) : (
-            ""
           )}
-          {props.data.github ? (
+          {props.data.github && (
             <a target="_blank" href={props.data.github}>
               Github
             </a>
-          ) : (
-            ""
           )}
         </div>
       </div>
