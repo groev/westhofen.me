@@ -110,6 +110,9 @@ footer {
   background: #eee;
   margin: 0 auto;
   padding: 200px 0px;
+  @media (max-width: $break) {
+    padding: 1rem;
+  }
   .grid {
     max-width: 1200px;
     margin: 0 auto;
@@ -133,6 +136,9 @@ footer {
       color: #fff;
       border-radius: 20px;
       overflow: hidden;
+      @media (max-width: $break) {
+        height: 200px;
+      }
       cursor: pointer;
       &:hover .front {
         @include transition;

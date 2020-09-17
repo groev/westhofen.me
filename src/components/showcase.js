@@ -4,19 +4,9 @@ import Projects from "../data/showcase";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Showcase({ loading }) {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.5
-      }
-    }
-  };
-
   const item = {
     hidden: { opacity: 0 },
-    show: { opacity: 1 }
+    show: { opacity: 1 },
   };
 
   return (
@@ -29,13 +19,8 @@ export default function Showcase({ loading }) {
           </motion.div>
         )}
         {!loading && (
-          <motion.div
-            className="grid"
-            variants={container}
-            initial="hidden"
-            animate="show"
-          >
-            {Projects.map(project => {
+          <motion.div className="grid" initial="hidden" animate="show">
+            {Projects.map((project) => {
               return (
                 <motion.div variants={item}>
                   <Project data={project} />
